@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2/css/all.min.css">
+    <title>Shoes Sales Manager</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fixed-top header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img class="brand-img" src="./assets/img/Logo_NIKE.png" alt="">
+                            <div class="brand">Nike</div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse nav-wrap" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <ul class="nav__list">
+                                    <li class="nav__list-item active">
+                                        <div class="nav__list-body">
+                                            <h2 class="nav__title ">home</h2>
+                                            <div class="line"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav__list-item">
+                                        <div class="nav__list-body">
+                                            <h2 class="nav__title">about</h2>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav__list-item">
+                                        <div class="nav__list-body">
+                                            <h2 class="nav__title">bills</h2>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav__list-item">
+                                        <div class="nav__list-body">
+                                            <span class="nav__count">6</span>
+                                            <i class="nav__list-item-icon fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+        <ul class="body__list">
+            <li class="body__list-item active">
+                <!-- list-card -->
+                <div class="row list-card">
+
+                </div>
+            </li>
+            <li class="body__list-item">
+                <h1>About</h1>
+               
+
+            </li>
+            <li class="body__list-item">
+                <!-- list-bills -->
+                <div class="list-bills">
+                    <table class="table shopping-bills__table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-1">Code</th>
+                                <th scope="col" class="col-2">Customer name</th>
+                                <th scope="col" class="col-2">Date</th>
+                                <th scope="col" class="col-2">Item Numbers</th>
+                                <th scope="col" class="col-2">Total Quantity</th>
+                                <th scope="col" class="col-2">Total Price</th>
+                                <th scope="col" class="col-1">Return</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <button type="button" class="btn btn-outline-danger back-to-shopping btn-lg">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <div class="back-to-shopping-title">Back To Shopping</div>
+                    </button>
+                </div>
+
+            </li>
+            <li class="body__list-item">
+                <!-- list-shopping-cart -->
+                <div class="list-shopping-cart">
+
+                </div>
+                <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Thông tin người mua</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3 needs-validation" id="buy-validation">
+                                    <div class="row g-3 ">
+                                        <label for="validationName" class="form-label">Họ và tên<span
+                                                class="text-danger">*</span></label>
+                                        <div class="col-md-6 form-group">
+                                            <input type="text" class="form-control" id="validationSurname"
+                                                name="surname" placeholder="Họ">
+                                            <div class="invalid-feedback">
+                                                Hãy nhập đủ thông tin!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <input type="text" class="form-control" id="validationLastname"
+                                                name="lastname" placeholder="Tên">
+                                            <div class="invalid-feedback">
+                                                Hãy nhập đủ thông tin!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 form-group">
+                                        <label for="validationEmail" class="form-label">Email<span
+                                                class="text-danger">*</span></label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" id="validationEmail" name="email"
+                                                placeholder="Email">
+                                            <div class="invalid-feedback">
+                                                Email chưa chính xác!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 form-group">
+                                        <label for="validationTel" class="form-label">Số điện thoại<span
+                                                class="text-danger">*</span></label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" id="validationTel" name="tel"
+                                                placeholder="Số điện thoại">
+                                            <div class="invalid-feedback">
+                                                Hãy nhập số điện thoại!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 form-group">
+                                        <label for="validationProvince" class="form-label">Địa chỉ<span
+                                                class="text-danger">*</span></label>
+                                        <div class="col-md-4">
+                                            <select name="province" class="form-select" id="validationProvince">
+                                                <option selected disabled value="">--Chọn Tỉnh/Thành phố--</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-select" id="validationDistricts" name="district"
+                                                disabled>
+                                                <option selected disabled value="">--Chọn Huyện/Quận--</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-select" id="validationWards" name="ward" disabled>
+                                                <option selected disabled value="">--Chọn Xã/Phường--</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="text" name="homenumber" class="form-control"
+                                                id="validationAddress" placeholder="Số nhà" disabled>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Hãy nhập đủ thông tin!
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3">
+                                        <label for="validationMessage" class="form-label">Lời nhắn</label>
+                                        <div class="mb-3">
+                                            <textarea name="message" class="form-control" id="validationMessage"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-lg cancle-modal">Hủy</button>
+                                        <button type="submit" class="btn btn-primary btn-lg form__buy-submit">Xác
+                                            nhận</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+<script src="./js/file.js"></script>
+<script src="./js/taps/ui.js"></script>
+<script src="./js/localStorage/dataListSP.js"></script>
+<script src="./js/localStorage/handleTypeCating.js"></script>
+<script src="./js/home/renderHome.js"></script>
+<script src="./js/home/handleAddSP.js"></script>
+<script src="./js/cart/handleClickBuy.js"></script>
+<script src="./js/cart/showItemCart.js"></script>
+<script src="./js/cart/handleApi/getAddress.js"></script>
+<script src="./js/cart/vadidate/randomID.js"></script>
+<script src="./js/bills/apiOrder.js"></script>
+<script src="./js/cart/vadidate/validation.js"></script>
+<script src="./js/cart/vadidate/handleValidate.js"></script>
+<script src="./js/bills/renderOrders.js"></script>
+
+</html>
